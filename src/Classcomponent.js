@@ -1,31 +1,48 @@
 import React, { Component } from 'react'
+import './styles.css';
 
 export default class Classcomponent extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-             name:"Stanislas"
+             count:0
         };
 
-        this.handleClick = this.handleClick.bind(this);
+        this.incr = this.incr.bind(this);
+        this.decr = this.decr.bind(this);
+        this.reset = this.reset.bind(this);
     }
-        handleClick(){
+        incr(){
+            this.setState(state =>({
+                
+                count: state.count +1
+            }));    
+        }
+
+        decr(){
+            this.setState (state =>({
+                
+                count: state.count -1
+                }));    
+        }
+
+        reset(){
             this.setState({
                 
-                    name :"Sorry bro but im Stanislav"
-                })
-            
-        
-    }
+                    count : 0
+                })    
+        }
     
     render() {
         return (
             <div>
-                
-                <h1>Hello my dear {this.state.name}!</h1>
-                <button onClick={ this.handleClick}> Click me </button>
+                <button onClick={this.incr}> +</button>
+                <button onClick={this.decr}> -</button>
+                <button onClick={this.reset}> reset</button>
+                <h1 className="hh"> SUM {this.state.count}</h1>
             </div>
+
         )
     }
 }

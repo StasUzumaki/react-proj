@@ -6,6 +6,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+.App-ez {
+  height: 40vmin;
+  pointer-events: none;
+}
+.App-bar{
+  width: 40vmin;
+  height: 40vmin;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
