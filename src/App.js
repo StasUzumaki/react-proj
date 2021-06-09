@@ -6,19 +6,20 @@ import Appbar from './Appbar';
 import Fcomponent from './Fcomponent';
 import Classcomponent from './Classcomponent';
 import Menu from './Menu';
-
+import Drinks from './Drinks';
 import Formcomponent from './Formcomponent';
 
 function App() {
   return (
     <div className="App">
       <Appbar />
+      
       <header className="App-header">
 
-        
-        <Formcomponent />
+        <Drinks />
+        {/*<Formcomponent />
         <Fcomponent />
-        <Menu />
+        <Menu />*/}
        
         <img src={ez} className="App-ez" alt="gif" />
         <p>

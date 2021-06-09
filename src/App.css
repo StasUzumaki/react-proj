@@ -14,7 +14,9 @@
   width: 40vmin;
   height: 40vmin;
 }
-
+.drink-image{
+  width: 200px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
