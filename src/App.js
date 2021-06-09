@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import ez from './ez.gif';
 import './App.css';
 import Fcomponent from './Fcomponent';
 import Classcomponent from './Classcomponent';
@@ -9,10 +10,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Fcomponent />
+        
         <Classcomponent />
         <Menu />
-        <img src={logo} className="App-logo" alt="logo" />
+
+        <img src={ez} className="" alt="gif" />
         <p>
          <h1>Hello Den!</h1>
         </p>
@@ -22,3 +24,4 @@ function App() {
 }
 
 export default App;
+//<img src={logo} className="App-logo" alt="logo" />
