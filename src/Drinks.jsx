@@ -1,7 +1,8 @@
 import React, { Component, useState, useEffect } from 'react'
 import Drink from './Drink';
+import './App.css';
 
- class Drinks1 extends Component {
+export default class Drinks extends Component {
     constructor(props) {
         super(props);
     
@@ -35,22 +36,24 @@ import Drink from './Drink';
         if(error){
             return <p>Error {error.message} </p>
         }   else if (!isLoaded)  {
-            return <p>Loading  </p>
+            return <p>Loading...  </p>
         } else {
             return(
-                <ul>
-                    {
-                        items.map(item=> (
-                            <Drink name={item.strDrink} image ={item.strDrinkThumb}/>
-                        ))}
-                    
-                </ul>
+                <div >
+                    <ul className="DrinksContent">
+                        {
+                            items.map(item=> (
+                                <Drink name={item.strDrink} image ={item.strDrinkThumb}/>
+                            ))}
+                        
+                    </ul>
+                </div>
             )
         }
     }
 }
 
-export default function Drinks() {
+ function Drinks1() {
     const [error, setError] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);

@@ -15,8 +15,44 @@
   height: 40vmin;
 }
 .drink-image{
-  width: 200px;
+  display: block;
+  margin: 0 auto; 
+  width: 70%;
+  border-radius: 40%;
 }
+.DrinksContent{
+  justify-content: space-around; 
+  -ms-box-orient: horizontal;
+  flex-Grow: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  text-align: center;
+  color: black;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+}
+.li{
+  font-family: Luminari, fantasy;
+  margin-top: 20px;
+  height: 280px;
+  width: 300px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-size: 20px;
+  background-color: rgb(241, 241, 227);
+  border-radius: 13%;
+  border-style: outset;
+  border-color: rgb(243, 191, 191);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -24,7 +60,7 @@
 }
 
 .App-header {
-  background-color: #4a2fe6;
+  background-color: #f5f0fa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,7 +71,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #eefd68;
 }
 
 @keyframes App-logo-spin {

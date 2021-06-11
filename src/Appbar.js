@@ -7,6 +7,8 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Button from '@material-ui/core/Button';
+import { yellow } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,18 +19,35 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    textAlign: 'left',
+    fontSize: '27px',
+    letterSpacing: '3px',
+    textAlign: 'center',
     display: 'none',
+    color: 'black',
+    fontFamily: 'Verdana',
+    fontWeight: 'bold',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
+  title1: {
+    textAlign: 'left',
+    display: 'none',
+    color: 'black',
+    fontFamily: 'Consolas',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },
+  tool:{
+    backgroundColor: '#eefd68',
+  },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: fade(theme.palette.common.black, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(theme.palette.common.black, 0.25),
     },
     marginLeft: 0,
     width: '100%',
@@ -45,9 +64,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: 'black',
   },
   inputRoot: {
-    color: 'inherit',
+    color: 'black',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -55,12 +75,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
-    },
+
   },
 }));
 
@@ -69,16 +84,17 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar  position="static">
+        <Toolbar className={classes.tool} >
           <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
             aria-label="open drawer"
           >
             <MenuIcon />
           </IconButton>
+          <Button color="yellow" className={classes.title1} variant="h6" noWrap>Sign up</Button>
+          <Button color="yellow" className={classes.title1} variant="h6" noWrap>Login</Button>
           <Typography className={classes.title} variant="h6" noWrap>
             SHEESH
           </Typography>
